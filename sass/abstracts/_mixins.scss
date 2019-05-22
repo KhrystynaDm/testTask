@@ -1,0 +1,29 @@
+@mixin transition() {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+@mixin grid-size($size) {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 $size;
+  -ms-flex: 0 0 $size;
+  flex: 0 0 $size;
+  max-width: $size;
+}
+
+@mixin text-ellipsis($strokes) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $strokes;
+  -webkit-box-orient: vertical;
+}
+
+@mixin fontSize($minSize, $maxSize) {
+	font-size:  $maxSize + 0px;
+	font-size: -webkit-calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
+	font-size: -moz-calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
+	font-size: calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
+}

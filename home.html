@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<main id="root" class="pokemon-wrap">
+    <div class="container">
+        <div class="row m-row align-center">
+            <div class="column col-md-6">
+                <h1 class="pokemon-wrap__title">Pokedex</h1>
+            </div>
+        </div>
+        <div class="row m-row">
+            <div class="column col-md-7" id="pokemon-list__wrap">
+                <div id="pokemon-catalog" class="row m-row pokemon-catalog">
+
+                </div>
+                <div id="loadMore" class="btn btn-more" onclick="showMorePokemons()">Load More</div>
+            </div>
+            <div id="pokemon-card" class="column col-md-5">
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+<script src="js/pokedex.min.js"></script>
+
+
+</body>
+
+</html>
